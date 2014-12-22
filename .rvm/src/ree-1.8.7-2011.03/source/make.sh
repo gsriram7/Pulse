@@ -1,0 +1,2 @@
+#!/bin/bash
+exec make PREINCFLAGS='-I/opt/local/include' PRELIBS='-L/opt/local/lib -Wl,-rpath,/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -L/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -ltcmalloc_minimal ' "$@"

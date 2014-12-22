@@ -1,0 +1,12 @@
+export PATH="/home/pulse/.rvm/gems/ruby-1.8.7-p352/bin:/home/pulse/.rvm/gems/ruby-1.8.7-p352@global/bin:/home/pulse/.rvm/rubies/ruby-1.8.7-p352/bin:/home/pulse/.rvm/bin:$PATH"
+rvm_env_string='ruby-1.8.7-p352' ; export rvm_env_string
+rvm_path='/home/pulse/.rvm' ; export rvm_path
+rvm_ruby_string='ruby-1.8.7-p352' ; export rvm_ruby_string
+unset rvm_gemset_name
+RUBY_VERSION='ruby-1.8.7-p352' ; export RUBY_VERSION
+GEM_HOME='/home/pulse/.rvm/gems/ruby-1.8.7-p352' ; export GEM_HOME
+GEM_PATH='/home/pulse/.rvm/gems/ruby-1.8.7-p352:/home/pulse/.rvm/gems/ruby-1.8.7-p352@global' ; export GEM_PATH
+MY_RUBY_HOME='/home/pulse/.rvm/rubies/ruby-1.8.7-p352' ; export MY_RUBY_HOME
+IRBRC='/home/pulse/.rvm/rubies/ruby-1.8.7-p352/.irbrc' ; export IRBRC
+unset MAGLEV_HOME
+unset RBXOPT

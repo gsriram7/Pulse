@@ -1,0 +1,48 @@
+have_header: checking for alloca.h... -------------------- yes
+
+"gcc -E -I/opt/local/include -I. -I/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I/home/pulse/.passenger/standalone/3.0.9-x86-ruby1.8.7-linux-gcc4.1.2-1002/support/ext/ruby  -D_FILE_OFFSET_BITS=64  -g -O2    -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <alloca.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/io.h... -------------------- no
+
+"gcc -E -I/opt/local/include -I. -I/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I/home/pulse/.passenger/standalone/3.0.9-x86-ruby1.8.7-linux-gcc4.1.2-1002/support/ext/ruby  -D_FILE_OFFSET_BITS=64  -g -O2    -g  conftest.c -o conftest.i"
+conftest.c:1:21: error: ruby/io.h: No such file or directory
+checked program was:
+/* begin */
+1: #include <ruby/io.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_reserved_fd_p()... -------------------- no
+
+"gcc -o conftest -I/opt/local/include -I. -I/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I/home/pulse/.passenger/standalone/3.0.9-x86-ruby1.8.7-linux-gcc4.1.2-1002/support/ext/ruby  -D_FILE_OFFSET_BITS=64  -g -O2    -g conftest.c  -L. -L/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  "
+conftest.c: In function 't':
+conftest.c:3: error: 'rb_reserved_fd_p' undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))rb_reserved_fd_p; return 0; }
+/* end */
+
+"gcc -o conftest -I/opt/local/include -I. -I/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-linux -I/home/pulse/.passenger/standalone/3.0.9-x86-ruby1.8.7-linux-gcc4.1.2-1002/support/ext/ruby  -D_FILE_OFFSET_BITS=64  -g -O2    -g conftest.c  -L. -L/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -Wl,-R/home/pulse/.rvm/rubies/ree-1.8.7-2011.03/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static  "
+/tmp/ccW8K8ce.o: In function `t':
+/home/pulse/.passenger/standalone/3.0.9-x86-ruby1.8.7-linux-gcc4.1.2-1002/support/ext/ruby/ruby-1.8.7-x86-linux/conftest.c:3: undefined reference to `rb_reserved_fd_p'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { rb_reserved_fd_p(); return 0; }
+/* end */
+
+--------------------
+

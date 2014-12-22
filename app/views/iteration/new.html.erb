@@ -1,0 +1,14 @@
+<% form_tag save_iteration_path(@project), :multipart => true do %>
+    <%= render :partial => "iteration_details", :locals => {:iteration => @iteration, :metrics => @project.stuffed_metrics} %>
+
+    <div id="attachments">
+        <ul></ul>
+        <a class="add" href="#">Add attachment</a>
+    </div>
+    <%= submit_tag "Add Iteration Information" %>
+<% end %>
+
+<script type="text/javascript">
+    Attachment.init();
+    $(".datepicker").datepicker();
+</script>

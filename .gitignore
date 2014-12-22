@@ -1,0 +1,11 @@
+log
+.DS_Store
+tmp/*
+config/couchdb.yml
+nbproject
+*.orig
+public/attachments
+.idea/*
+.rvmrc
+tags
+public/**/all.*
